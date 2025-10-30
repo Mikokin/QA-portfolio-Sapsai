@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "2ed9a85e-1222-4476-a435-80e04571730c",
+		"name": "QA portfolio",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49630549",
+		"_collection_link": "https://mikokin-1007487.postman.co/workspace/Oleg's-Workspace~d22babf6-bbaf-484d-800a-2a4f0c4c31a8/collection/49630549-2ed9a85e-1222-4476-a435-80e04571730c?action=share&source=collection_link&creator=49630549"
+	},
+	"item": [
+		{
+			"name": "Get Pet by status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "petstore.swagger.io/v2/pet/findByStatus?status=available&status=pending&status=sold",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"pet",
+						"findByStatus"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "available"
+						},
+						{
+							"key": "status",
+							"value": "pending"
+						},
+						{
+							"key": "status",
+							"value": "sold"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create pet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 123456,\r\n  \"name\": \"Rex\",\r\n  \"status\": \"available\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/pet",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"pet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete pet",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "api_key",
+						"value": "special-key",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "petstore.swagger.io/v2/pet/123456",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"pet",
+						"123456"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get pet by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "petstore.swagger.io/v2/pet/123456",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"pet",
+						"123456"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
